@@ -4,11 +4,10 @@
 }
 
 .form {
-  width: 600px;
   margin: 0 auto;
   font-family: sans-serif;
-  background: $white;
   border-radius: 0.25rem;
+
   &-item {
     position: relative;
     display: flex;

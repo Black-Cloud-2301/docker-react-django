@@ -1,4 +1,5 @@
 import { frequentlyQuestion } from '../data/json-data';
+import { Link } from 'react-router-dom';
 import Accordion from '../components/Accordion';
 
 const Home = () => {
@@ -6,7 +7,9 @@ const Home = () => {
     <main className='home'>
       <header>
         <img src='/images/netflix.png' alt='logo' width='134px' />
-        <button>Sign In</button>
+        <Link to={'signIn'} className='btn__signIn'>
+          Sign In
+        </Link>
       </header>
       <section className='first-section'>
         <img src='/images/home-bg.jpg' alt='home-bg' />

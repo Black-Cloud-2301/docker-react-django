@@ -1,0 +1,26 @@
+footer {
+  color: $gray-2;
+  padding-bottom: 2rem;
+  p {
+    padding-top: 2rem;
+  }
+
+  a {
+    color: $gray-2;
+  }
+
+  .footer {
+    width: 80%;
+    margin: 0 auto;
+
+    &__header {
+      padding: 4rem 0 2rem 0;
+    }
+
+    &__info {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+  }
+}

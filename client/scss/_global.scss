@@ -28,6 +28,7 @@ button {
   border: none;
   font-family: 'Public Sans', sans-serif;
   background-color: $red;
+  color: $white;
   transition: opacity 300ms ease-in-out;
   cursor: pointer;
 
@@ -40,6 +41,23 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+//* Flexbox
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
 }
 
 //* Visibility
