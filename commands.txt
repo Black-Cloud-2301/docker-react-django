@@ -1,0 +1,37 @@
+# frontend
+yarn create react-app client --template typescript
+yarn add react-router-dom
+
+# docker:
+## build:
+
+docker-compose build
+
+## run command in docker:
+
+docker-compose run --rm app sh -c "django-admin startproject app ."
+docker-compose run --rm app sh -c "python manage.py startapp core"
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+docker-compose run --rm app sh -c "python manage.py createsuperuser"
+
+## rebuild and start docker
+
+docker-compose up
+
+## add data dump to db
+
+docker cp tlu_data tlu_management_docker-db-1:db.dump
+docker exec -it tlu_management_docker-db-1 bash
+pg_restore -U postgres -d tlu_management --no-owner -1 db.dump
+
+cat tlu_data.sql | docker exec -i tlu_management_docker-db-1 psql -U tuank tlu_management
+
+## stop container and delete all container and volumes
+
+docker-compose down
+docker rm -f $(docker ps -a -q)
+docker volume rm $(docker volume ls -q)
+
+## connect to db
+
+docker exec -it tlu_management_docker-db-1 psql -U tuank -W tlu_management

@@ -1,0 +1,63 @@
+*,
+*:focus {
+  outline: none;
+}
+
+.form {
+  width: 600px;
+  margin: 0 auto;
+  font-family: sans-serif;
+  background: $white;
+  border-radius: 0.25rem;
+  &-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 200px;
+    }
+
+    input {
+      display: block;
+      width: 400px;
+      height: 60px;
+      background: transparent;
+      border: none;
+      transition: all 0.3s ease;
+      padding: 0 15px;
+
+      // &:focus{
+      //   border-color: blue;
+      // }
+    }
+
+    label {
+      position: absolute;
+      cursor: text;
+      z-index: 2;
+      top: 19px;
+      left: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      background: transparent;
+      padding: 0 10px;
+      color: #999;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.form-item input:focus + label,
+.form-item input:valid + label {
+  font-size: 12px;
+  top: 0px;
+  left: 0px;
+}
+// .form-item input:focus + label {
+//   color: blue;
+// }
