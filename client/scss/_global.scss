@@ -7,6 +7,8 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -24,6 +26,15 @@ a:hover {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
 button {
   border: none;
   font-family: 'Public Sans', sans-serif;
@@ -37,11 +48,6 @@ button {
   }
 }
 //* Spacing
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 //* Flexbox
 .flex {

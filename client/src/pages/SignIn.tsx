@@ -55,12 +55,12 @@ const SignIn = () => {
             </button>
             <div className='flex flex-ai-c'>
               <p>New to Netflix?</p>
-              <Link to='' className='link-to-signUp'>
+              <Link to='/' className='link-to-signUp'>
                 Sign up now
               </Link>
             </div>
             <div className='more-info'>
-              <p>
+              <p className='more-info-header'>
                 This page is protected by Google reCAPTCHA to ensure you're not
                 a bot.{' '}
                 {!learnMore && (

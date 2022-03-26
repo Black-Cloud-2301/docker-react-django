@@ -13,7 +13,7 @@ const Home = () => {
       </header>
       <section className='first-section'>
         <img src='/images/home-bg.jpg' alt='home-bg' />
-        <div className='container'>
+        <div className='flex flex-jc-c flex-ai-c container'>
           <article>
             <h3>Unlimited movies, TV shows, and more.</h3>
             <h4>Watch anywhere. Cancel anytime.</h4>
@@ -47,7 +47,7 @@ const Home = () => {
         </article>
       </section>
       <section className='third-section'>
-        <h2 className='title'>Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <article>
           {frequentlyQuestion.map((item, index) => {
             return <Accordion key={index} item={item} />;
